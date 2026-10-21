@@ -9,9 +9,9 @@ let package = Package(
     .iOS(.v18), .macOS(.v15)
   ],
   products: [
+    // Automatic linkage lets Kokoro and the app share each dependency once.
     .library(
       name: "MisakiSwift",
-      type: .dynamic,
       targets: ["MisakiSwift"]
     ),
   ],
